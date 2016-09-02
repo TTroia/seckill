@@ -6,26 +6,26 @@ package org.seckill.dto;
  */
 //所有ajax请求返回类型，封装json结果
 public class SeckillResult<T> {
-    private boolean seccuss;
+    private boolean success;
     private T data;
     private String error;
 
-    public SeckillResult(boolean seccuss, T data) {
-        this.seccuss = seccuss;
+    public SeckillResult(boolean success, T data) {
+        this.success = success;
         this.data = data;
     }
 
-    public SeckillResult(boolean seccuss, String error) {
-        this.seccuss = seccuss;
+    public SeckillResult(boolean success, String error) {
+        this.success = success;
         this.error = error;
     }
 
-    public boolean isSeccuss() {
-        return seccuss;
+    public boolean isSuccess() {
+        return success;
     }
 
-    public void setSeccuss(boolean seccuss) {
-        this.seccuss = seccuss;
+    public void setSuccess(boolean success) {
+        this.success = success;
     }
 
     public T getData() {
