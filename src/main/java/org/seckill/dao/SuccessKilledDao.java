@@ -3,6 +3,8 @@ package org.seckill.dao;
 import org.apache.ibatis.annotations.Param;
 import org.seckill.entity.SuccessKilled;
 
+import java.util.Map;
+
 /**
  * @author changhongyuan
  * @date 2016年8月28日08:58:57
@@ -22,4 +24,5 @@ public interface SuccessKilledDao {
      * @return
      */
     SuccessKilled queryByIdWithSeckill(@Param("seckillId") long seckillId,@Param("userPhone") long userPhone);
+
 }

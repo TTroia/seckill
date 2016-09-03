@@ -19,80 +19,81 @@
       <schema id="8" name="performance_schema"/>
       <schema id="9" name="test"/>
       <schema id="10" name="wuxitengye"/>
-      <table id="11" parent="1" name="seckill"/>
-      <table id="12" parent="1" name="success_killed">
+      <schema id="11" name="li_enterprise"/>
+      <table id="12" parent="1" name="seckill"/>
+      <table id="13" parent="1" name="success_killed">
         <comment>秒杀成功明细表</comment>
       </table>
-      <column id="13" parent="11" name="seckill_id">
+      <column id="14" parent="12" name="seckill_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="14" parent="11" name="name">
+      <column id="15" parent="12" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(120)|0</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="15" parent="11" name="number">
+      <column id="16" parent="12" name="number">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="16" parent="11" name="start_time">
+      <column id="17" parent="12" name="start_time">
         <mandatory>1</mandatory>
         <data-type>datetime|0</data-type>
       </column>
-      <column id="17" parent="11" name="end_time">
+      <column id="18" parent="12" name="end_time">
         <mandatory>1</mandatory>
         <data-type>datetime|0</data-type>
       </column>
-      <column id="18" parent="11" name="create_time">
+      <column id="19" parent="12" name="create_time">
         <mandatory>1</mandatory>
         <data-type>timestamp|0</data-type>
         <default-expression>CURRENT_TIMESTAMP</default-expression>
       </column>
-      <index id="19" parent="11" name="idx_create_time">
+      <index id="20" parent="12" name="idx_create_time">
         <columns>create_time</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="20" parent="11" name="idx_end_time">
+      <index id="21" parent="12" name="idx_end_time">
         <columns>end_time</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="21" parent="11" name="idx_start_time">
+      <index id="22" parent="12" name="idx_start_time">
         <columns>start_time</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="22" parent="11" name="PRIMARY">
+      <key id="23" parent="12" name="PRIMARY">
         <columns>seckill_id</columns>
         <primary>1</primary>
       </key>
-      <column id="23" parent="12" name="seckill_id">
+      <column id="24" parent="13" name="seckill_id">
         <comment>秒杀商品id</comment>
         <mandatory>1</mandatory>
         <data-type>bigint(20)|0</data-type>
       </column>
-      <column id="24" parent="12" name="user_phone">
+      <column id="25" parent="13" name="user_phone">
         <comment>用户手机号</comment>
         <mandatory>1</mandatory>
         <data-type>bigint(20)|0</data-type>
       </column>
-      <column id="25" parent="12" name="state">
+      <column id="26" parent="13" name="state">
         <comment>状态 -1无效 0成功 1已付款</comment>
         <mandatory>1</mandatory>
         <data-type>tinyint(4)|0</data-type>
         <default-expression>&apos;-1&apos;</default-expression>
       </column>
-      <column id="26" parent="12" name="create_time">
+      <column id="27" parent="13" name="create_time">
         <comment>创建时间</comment>
         <mandatory>1</mandatory>
         <data-type>timestamp|0</data-type>
         <default-expression>CURRENT_TIMESTAMP</default-expression>
       </column>
-      <index id="27" parent="12" name="idx_create_time">
+      <index id="28" parent="13" name="idx_create_time">
         <columns>create_time</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="28" parent="12" name="PRIMARY">
+      <key id="29" parent="13" name="PRIMARY">
         <columns>seckill_id
 user_phone</columns>
         <primary>1</primary>
