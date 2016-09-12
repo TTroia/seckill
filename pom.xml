@@ -152,6 +152,18 @@
       <artifactId>commons-collections</artifactId>
       <version>3.2.1</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.qq</groupId>
+      <artifactId>qq</artifactId>
+      <version>1.0</version>
+    </dependency>
+
   </dependencies>
 
   <build>

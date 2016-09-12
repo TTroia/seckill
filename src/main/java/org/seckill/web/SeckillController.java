@@ -15,6 +15,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 import java.util.List;
 
@@ -31,11 +34,12 @@ public class SeckillController {
     private SeckillService seckillService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public String list(Model model) {
+    public String list(Model model, HttpServletRequest request, HttpServletResponse response) {
         List<Seckill> list = seckillService.getSeckillList();
         model.addAttribute("list", list);
         //list.jsp+model=ModelAndView
-
+        Cookie cookie = new Cookie("123","123");
+        response.addCookie(cookie);
         return "list";
     }
 
