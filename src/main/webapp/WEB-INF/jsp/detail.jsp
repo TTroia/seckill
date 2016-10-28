@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -59,8 +60,7 @@
 <script src="http://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <!--jQuery countDown倒计时插件-->
     <script src="http://cdn.bootcss.com/jquery.countdown/2.2.0/jquery.countdown.js"></script>
-
-<script src="/static/seckill/seckill.js" type="text/javascript"></script>
+    <script type="text/javascript" src="<c:url value='/static/seckill/seckill.js'/>"></script>
 <script>
     $(function () {
         //使用EL表达式传入参数

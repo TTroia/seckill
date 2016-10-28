@@ -24,5 +24,10 @@
     <!--默认匹配所有的请求-->
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+  <!--服务器端资源文件映射 -->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/static/*</url-pattern>
+  </servlet-mapping>
 
   </web-app>

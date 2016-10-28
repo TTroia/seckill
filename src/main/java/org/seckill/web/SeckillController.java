@@ -26,7 +26,6 @@ import java.util.List;
  * @date 2016年8月31日12:47:55
  */
 @Controller
-@RequestMapping(value = "/seckill")
 public class SeckillController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
